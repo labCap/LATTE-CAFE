@@ -1,0 +1,16 @@
+.about {
+    &__inner {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 220px 0;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 3px;
+    }
+
+    &__descr {
+        @include font($font-def, 400, 32px, 45px, $color-def);
+    }
+}

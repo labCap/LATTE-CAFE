@@ -1,0 +1,53 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 22px;
+    background: $color-dark-red;
+
+    &.fix {
+        position: fixed;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0;
+        position: relative;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        margin: 0 -10px;
+    }
+
+    &__link {
+        @include font($font-def, 400, 15px, 24px, $color-light-red);
+        margin: 0 10px;
+
+        @include hover-red;
+    }
+
+    &__logo {
+        max-width: 276px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__icons {
+        margin: 0 -8px;
+    }
+
+    &__ico {
+        @include font($font-def, 400, 24px, 24px, $color-light-red);
+        margin: 0 8px;
+        @include hover-red;
+    }
+}

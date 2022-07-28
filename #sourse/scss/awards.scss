@@ -1,0 +1,21 @@
+.awards {
+    background: $color-dark-red;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        max-width: 595px;
+    }
+
+    &__title {
+        @include font($font-minor, 400, 47px, 62px, $color-light-red);
+    }
+
+    &__descr {
+        @include font($font-def, 400, 18px, 27px, $color-light-red);
+
+    }
+}

@@ -1,0 +1,39 @@
+.footer {
+
+    &__inner {
+        padding: 56px 0 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__menu {
+        @include font($font-def, 400, 15px, 22px, #1f1f1f);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -16px 10px;
+    }
+
+    &__link {
+        margin: 0 16px 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include hover-red;
+    }
+
+    &__copyright {
+        @include font($font-def, 400, 13px, 20px, $color-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -8px;
+    }
+
+    &__copyright-item {
+        margin: 0 8px;
+    }
+}

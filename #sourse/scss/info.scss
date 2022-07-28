@@ -1,0 +1,27 @@
+.info {
+    background: $color-gold;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        flex: 0 1 390px;
+        text-align: center;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @include font($font-def, 400, 25px, 36px, #ffffff);
+        margin-bottom: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.blog {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__box {
+        margin: 0 -20px;
+    }
+
+    &__img {
+        margin: 0 20px 40px;
+        max-width: 644px;
+        height: auto;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.menus {
+    background: $color-light-yellow;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        max-width: 560px;
+    }
+
+    &__box-img {
+        max-width: 664px;
+        height: auto;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: $color-dark-yellow;
+        margin-bottom: 17px;
+    }
+
+    &__descr {
+        @include font($font-def, 400, 32px, 45px, $color-dark-yellow);
+        margin-bottom: 63px;
+    }
+
+    &__btn {
+
+        border: 2px solid $color-dark-yellow;
+        @include font($font-def, 400, 15px, 24px, $color-dark-yellow);
+        width: 100%;
+        padding: 17px 0;
+        margin-bottom: 12px;
+        text-align: center;
+
+        &.active {
+            background: $color-dark-yellow;
+            @include font($font-def, 400, 15px, 24px, #ffffff);
+        }
+
+        transition: $transition;
+
+        &:hover {
+            background: $color-dark-yellow;
+            color: #fff;
+        }
+
+        &:active {
+            background: $color-grey;
+            border: 2px solid $color-grey;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}

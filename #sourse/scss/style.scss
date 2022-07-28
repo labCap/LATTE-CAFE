@@ -1,0 +1,87 @@
+@import 'rem';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$color-light-red: #D27487;
+$color-dark-red: #4A2B33;
+$color-def: #222222;
+$color-light-yellow: #E9E9E3;
+$color-dark-yellow: #6F6F64;
+$color-gold: #AA9E54;
+$color-grey: #696969;
+
+$transition: all .2s linear;
+
+$font-def: 'Inter', sans-serif;
+$font-minor: 'Azeret Mono', monospace;
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@mixin font($f: $font-def, $fw: 400, $fz: 16px, $lh, $c: $color-def) {
+    font-family: $f;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    color: $c;
+}
+
+@mixin hover-red {
+    transition: $transition;
+
+    &:hover {
+        color: #d49ca8;
+    }
+
+    &:active {
+        color: #966e77;
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+body {
+    @include font($font-def, 400, 16px, 100%, $color-def);
+}
+
+a {
+    @include font($font-def, 400, 16px, 100%, $color-def);
+    display: inline-block;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1358px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.main {
+    flex: 1 1 100%;
+}
+
+.title {
+    @include font($font-minor, 700, 18px, 22px, $color-def);
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@import 'header';
+@import 'intro';
+@import 'about';
+@import 'menus';
+@import 'info';
+@import 'blog';
+@import 'awards';
+@import 'footer';

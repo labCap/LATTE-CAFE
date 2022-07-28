@@ -1,0 +1,16 @@
+.intro {
+    background: $color-dark-red;
+
+    &__inner {
+        padding: 120px 0 36px;
+    }
+
+    &__img {
+        max-width: 1328px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+}
